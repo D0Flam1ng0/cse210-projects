@@ -1,6 +1,17 @@
 class Circle
 {
     private double _radius;
+
+    public Circle()
+    {
+        _radius = 0.0;
+    }
+
+    public Circle(double radius)
+    {
+        _radius = radius;
+        SetRaduis(radius);
+    }
    public void SetRaduis(double radius)
     {
         if (radius <= 0)
