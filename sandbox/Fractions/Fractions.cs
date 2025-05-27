@@ -1,13 +1,11 @@
 using System;
 
-class Fraction
+class Fractions
 {
     private int _top;
     private int _bottom;
-
     public Fraction()
     {
-        // Default to 1/1
         _top = 1;
         _bottom = 1;
     }
@@ -28,7 +26,6 @@ public string GetFractionString()
         string text = $"{_top}/{_bottom}";
         return text;
     }
-
     public double GetDecimalValue()
     {
         // Notice that this is not stored as a member variable.
