@@ -9,5 +9,7 @@ class Program
 
         PoliceMan MyPoliceman = new PoliceMan("Cooper", "Silver", 34, "Shotgun");
         Console.WriteLine(MyPoliceman.GetPersonInfo());
+        Doctor MyDoctor = new Doctor("Bob", "James", 34, "Syringe");
+        Console.WriteLine(MyDoctor.GetPersonInfo());
     }
 }
