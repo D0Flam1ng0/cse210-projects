@@ -1,7 +1,8 @@
 class Doctor : Person
 {
     private string _tool;
-    public Doctor(string fristname, string lastname, int age, string tool)
+    private double _salary;
+    public Doctor(string fristname, string lastname, int age, string tool, double salary)
     : base(fristname, lastname, age)
     {
         _tool = tool;
@@ -10,5 +11,13 @@ class Doctor : Person
     public string GetDoctorInfo()
     {
         return $"Tool: {_tool} :: {GetPersonInfo()}";
+    }
+    public virtual string GetPersonInfo()
+    {
+        return $"Tool: {_tool} :: {base.GetPersonInfo()}";
+    }
+    public override double getSalary()
+    {
+        return _salary;
     }
 }
