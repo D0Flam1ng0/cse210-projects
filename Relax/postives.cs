@@ -50,6 +50,7 @@ public class ListingActivity : Activity
         }
 
         Console.WriteLine($"\nYou listed {items.Count} items.");
+          _goalManager?.RecordActivityEvent("Listing"); 
         DisplayEndMessage();
     }
 }

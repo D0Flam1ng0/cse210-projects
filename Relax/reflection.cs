@@ -43,7 +43,7 @@ public class ReflectionActivity : Activity
             ShowSpinner(5);
             elapsed += 5;
         }
-
+        _goalManager?.RecordActivityEvent("Reflection");
         DisplayEndMessage();
     }
 }

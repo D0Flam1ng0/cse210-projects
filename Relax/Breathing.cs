@@ -28,7 +28,7 @@ public class BreathingActivity : Activity
             ShowCountdown(4);
             elapsed += 4;
         }
-
+        _goalManager?.RecordActivityEvent("Breathing");
         DisplayEndMessage();
     }
 }

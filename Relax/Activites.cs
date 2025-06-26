@@ -6,6 +6,7 @@ public abstract class Activity
     protected string _name;
     protected string _description;
     protected int _duration;
+    protected GoalManager _goalManager;
 
     public Activity(string name, string description)
     {
@@ -21,6 +22,16 @@ public abstract class Activity
         _duration = int.Parse(Console.ReadLine());
         Console.WriteLine("Prepare to begin...");
         ShowSpinner(3);
+    }
+
+    public void SetDuration(int duration)
+    {
+        _duration = duration;
+    }
+
+    public void SetGoalManager(GoalManager manager)
+    {
+        _goalManager = manager;
     }
 
     public void DisplayEndMessage()
