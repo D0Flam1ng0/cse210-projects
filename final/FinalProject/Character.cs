@@ -11,6 +11,24 @@ public class Character
     public Dictionary<string, Subclass> Subclasses { get; set; } = new();
     public Dictionary<string, int> AbilityScores { get; set; } = new();
 
+    // ✅ NEW: Constructor to support derived classes
+    public Character() { }
+
+    public Character(string name, int level)
+    {
+        Name = name;
+        Level = level;
+        Classes = new();
+        Subclasses = new();
+        AbilityScores = new();
+    }
+
+    // ✅ NEW: Virtual method for polymorphism
+    public virtual void DisplayInfo()
+    {
+        Console.WriteLine($"Character: {Name}, Level: {Level}");
+    }
+
     public List<Ability> GetAllAbilities()
     {
         List<Ability> allAbilities = new();
